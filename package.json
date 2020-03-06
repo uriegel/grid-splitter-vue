@@ -1,0 +1,23 @@
+{
+  "name": "grid-splitter-vue",
+  "version": "1.0.0",
+  "description": "A grid splitter for Vue, resizable with splitter grid",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/uriegel/grid-splitter-vue.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Vue"
+  ],
+  "author": "Uwe Riegel",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/uriegel/grid-splitter-vue/issues"
+  },
+  "homepage": "https://github.com/uriegel/grid-splitter-vue#readme"
+}
