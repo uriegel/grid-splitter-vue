@@ -12,7 +12,8 @@
   },
   "keywords": [
     "Javascript",
-    "Vue"
+    "Vue",
+    "Vue plugin"
   ],
   "author": "Uwe Riegel",
   "license": "MIT",
