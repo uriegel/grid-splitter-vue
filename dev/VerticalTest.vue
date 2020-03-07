@@ -2,21 +2,14 @@
     <div class="root">
         <splitter-grid :isVertical=true :isSecondInvisible="isHidden" @splitter-position-changed="viewerHeightChanged">
             <template v-slot:first>
-                <splitter-grid>
-                    <template v-slot:first>
-                        <div class="left">
-                            <p>
-                                <button @click="onHide">Verbergen</button>
-                            </p>
-                        </div>
-                    </template>
-                    <template v-slot:second>
-                        <div class="right"></div>
-                    </template>
-                </splitter-grid>
+                <div class="left">
+                    <p>
+                        <button @click="onHide">Verbergen</button>
+                    </p>
+                </div>
             </template>
             <template v-slot:second>
-                <div class="lower"></div>
+                <div class="right"></div>
             </template>
         </splitter-grid>
     </div>
@@ -64,12 +57,6 @@ body {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-}
-.upper {
-    background-color: chartreuse;
-}
-.lower {
-    background-color: blueviolet;
 }
 .left {
     background-color: yellow;

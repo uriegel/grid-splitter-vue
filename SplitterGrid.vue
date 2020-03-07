@@ -1,8 +1,16 @@
 <template>
     <div ref="container" class="splitterGridContainer" :class='{ isVertical: isVertical}' >
-        <slot name="first"></slot>
+        <div class="pane">
+            <div class="pane-container">
+                <slot name="first"></slot>
+            </div>
+        </div>
         <div class="splitter" v-if="!isSecondInvisible" @mousedown="onSplitterMouseDown"></div>
-        <slot name="second" v-if="!isSecondInvisible"></slot>
+        <div class="pane" v-if="!isSecondInvisible">
+            <div class="pane-container">
+                <slot name="second"></slot>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -80,6 +88,11 @@ export default Vue.extend({
 })
 </script>
 
+<style>
+.pane-container>:first-child {
+    height: 100vh;
+}
+</style>
 <style scoped>
 .splitterGridContainer {
     display:flex;
@@ -88,6 +101,16 @@ export default Vue.extend({
 }
 .splitterGridContainer.isVertical {
     flex-direction: column;
+}
+.pane {
+    flex-grow: 1;
+    position: relative;
+}
+.pane-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 .splitter {
     background-color: var(--gridsplitter-grip-color);

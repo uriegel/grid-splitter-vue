@@ -4,7 +4,9 @@
   "description": "A grid splitter for Vue, resizable with splitter grid",
   "main": "index.js",
   "scripts": {
-    "Columns": "vue serve ./dev/SplitterGridTest.vue"
+    "Horizontal": "vue serve ./dev/HorizontalTest.vue",
+    "Vertical": "vue serve ./dev/VerticalTest.vue",
+    "Both": "vue serve ./dev/SplitterGridTest.vue"
   },
   "repository": {
     "type": "git",
