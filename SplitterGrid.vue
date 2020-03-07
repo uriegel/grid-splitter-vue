@@ -90,7 +90,7 @@ export default Vue.extend({
     flex-direction: column;
 }
 .splitter {
-    background-color: var(--grip-color);
+    background-color: var(--gridsplitter-grip-color);
     transition: background-color 0.4s;
     flex: 0 0 6px;
     cursor: ew-resize;
@@ -99,10 +99,10 @@ export default Vue.extend({
     cursor: ns-resize;
 }
 .splitter:hover {
-    background-color: darkgray;
+    background-color: var(--gridsplitter-grip-hover-color);
 }
 
 .splitter:active {
-    background-color: #6b6969;
+    background-color: var(--gridsplitter-grip-active-color);
 }
 </style>
