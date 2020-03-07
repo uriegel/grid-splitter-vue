@@ -90,7 +90,7 @@ export default Vue.extend({
 
 <style>
 .pane-container>:first-child {
-    height: 100vh;
+    height: 100%;
 }
 </style>
 <style scoped>
