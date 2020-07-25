@@ -32,7 +32,7 @@ export default Vue.extend({
             if (!newVal && this.height) {
                 Vue.nextTick(() => {
                     const view2 = this.$refs.container.children[2] 
-                    view2.style.flex = `0 0 ${this.height}%`
+                    view2.style.flex = this.isVertical ? `0 0 ${this.height * this.$refs.container.clientHeight / 100.0}px` : `0 0 ${this.height}%`
                 })
             }
             Vue.nextTick(() => { this.$emit("splitter-position-changed") })
@@ -63,7 +63,8 @@ export default Vue.extend({
                     (this.isVertical ? splitter.offsetHeight : splitter.offsetWidth)) * 100
                 this.height = procent2
                 view1.style.flexGrow = `1`
-                view2.style.flex = `0 0 ${procent2}%`
+                view2.style.flex = 
+                    this.isVertical ? `0 0 ${procent2 * this.$refs.container.clientHeight / 100.0}px` : `0 0 ${procent2}%`
                 this.$emit("splitter-position-changed")
 
                 evt.stopPropagation()
