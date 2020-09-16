@@ -1,6 +1,6 @@
 {
   "name": "grid-splitter-vue",
-  "version": "2.1.6",
+  "version": "2.1.7",
   "description": "A grid splitter for Vue, resizable with splitter grid",
   "main": "index.js",
   "scripts": {
